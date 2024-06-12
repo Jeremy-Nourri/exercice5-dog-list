@@ -10,7 +10,7 @@
 <br/>
 
     <div class="col-6 offset-2 rounded text-bg-dark p-3">
-        <form method="post" action="${pageContext.request.contextPath}/dogs">
+        <form method="post" action="${pageContext.request.contextPath}/dog/add-dog">
                 <legend>Ajouter un chien</legend>
             <div class="mb-3">
                 <label for="name" class="form-label">Nom :</label>
@@ -25,7 +25,7 @@
                 <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" required>
             </div>
                 <div class="mb-3">
-                    <button type="button" class="btn btn-outline-success">Ajouter</button>
+                    <button type="submit" class="btn btn-outline-success">Ajouter</button>
                 </div>
 
         </form>

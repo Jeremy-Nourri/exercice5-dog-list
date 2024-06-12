@@ -11,17 +11,14 @@ import jakarta.servlet.annotation.*;
 import org.example.exercice5doglist.model.Dog;
 import org.example.exercice5doglist.service.DogService;
 
-@WebServlet(name = "dogServlet", value = {"/dog/*"})
+@WebServlet(name = "dogServlet", value = "/dog/*")
 public class DogServlet extends HttpServlet {
-
-    private List<Dog> dogList;
 
     private DogService dogService;
 
     @Override
     public void init() throws ServletException {
-        dogService = new DogService();
-        dogList = dogService.findAll();
+            dogService = new DogService();
     }
 
     @Override
@@ -42,8 +39,6 @@ public class DogServlet extends HttpServlet {
         }
     }
 
-
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
@@ -54,17 +49,13 @@ public class DogServlet extends HttpServlet {
 
         dogService.create(dog);
 
-        dogList = dogService.findAll();
-
-        req.setAttribute("dogList", dogList);
+        req.setAttribute("dogList", dogService.findAll());
 
         req.getRequestDispatcher("/WEB-INF/list-dog.jsp").forward(req, resp);
     }
 
-
-
     private void listDog(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("dogList", dogList);
+        request.setAttribute("dogList", dogService.findAll());
         request.getRequestDispatcher("/WEB-INF/list-dog.jsp").forward(request, response);
     }
 
@@ -73,6 +64,7 @@ public class DogServlet extends HttpServlet {
     }
 
     private void detailsDog(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Dog> dogList = dogService.findAll();
         request.setAttribute("dogList", dogList);
         String pathInfo = (request.getPathInfo() != null && !request.getPathInfo().isEmpty()) ? request.getPathInfo() : "" ;
         int dogId = 0;
@@ -81,7 +73,6 @@ public class DogServlet extends HttpServlet {
         }
         request.setAttribute("dogId", dogId);
         request.getRequestDispatcher("/WEB-INF/details-dog.jsp").forward(request, response);
-
 
     }
 

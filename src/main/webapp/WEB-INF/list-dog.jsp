@@ -8,30 +8,36 @@
     <%@include file="bootstrap.html"%>
 </head>
 <body>
+<br/>
+<div class="container-md rounded text-bg-dark p-3">
 
-<table class="col-6 offset-2 rounded text-bg-dark p-3">
-    <thead>
-    <tr>
-        <th>nom</th>
-        <th>race</th>
-        <th>date de naissance</th>
-    </tr>
-    </thead>
-    <tbody>
-    <% if (!dogList.isEmpty()) { %>
-        <% for (Dog dog : dogList) { %>
+    <table class="table table-sm table-dark">
+        <legend>Liste des chiens</legend>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Race</th>
+            <th>Date de naissance</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider"  >
+        <% if (!dogList.isEmpty()) { %>
+            <% for (Dog dog : dogList) { %>
+                <tr>
+                    <td><%= dog.getName() %></td>
+                    <td><%= dog.getBreed() %></td>
+                    <td><%= dog.getDateOfBirth() %></td>
+                </tr>
+            <% } %>
+        <% } else { %>
             <tr>
-                <td><%= dog.getName() %></td>
-                <td><%= dog.getBreed() %></td>
-                <td><%= dog.getDateOfBirth() %></td>
+                <td colspan="3">Aucun chien n'est enregistré</td>
             </tr>
         <% } %>
-    <% } else { %>
-        <tr>
-            <td colspan="3">Aucun chien n'est enregistré</td>
-        </tr>
-    <% } %>
-    </tbody>
-</table>
+
+        </tbody>
+    </table>
+        <a href="add-dog" class="btn btn-success">Ajouter un chien</a>
+</div>
 </body>
 </html>

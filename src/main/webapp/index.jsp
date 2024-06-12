@@ -6,7 +6,7 @@
     <%@include file="WEB-INF/bootstrap.html"%>
 </head>
 <body>
-<h1>Bievenue sur la page d'accueil de l'application Dog list</h1>
+<h1>Bienvenue sur la page d'accueil de l'application Dog list</h1>
 <br/>
 <a href="dog/list-dog">Lien vers l'application</a>
 </body>

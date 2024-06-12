@@ -9,7 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="072cb60d-76c8-461d-a65c-6cb40a643741" name="Changes" comment="exercice 5 dog list" />
+    <list default="true" id="072cb60d-76c8-461d-a65c-6cb40a643741" name="Changes" comment="feat: create dog">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exercice5doglist/controller/DogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exercice5doglist/controller/DogServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exercice5doglist/service/DogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exercice5doglist/service/DogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/add-dog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/add-dog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/list-dog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/list-dog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +80,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -135,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718178808539</updated>
       <workItem from="1718178809676" duration="4063000" />
-      <workItem from="1718183518931" duration="5781000" />
+      <workItem from="1718183518931" duration="14033000" />
     </task>
     <task id="LOCAL-00001" summary="exercice 5 dog list">
       <option name="closed" value="true" />
@@ -145,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718192255449</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: create dog">
+      <option name="closed" value="true" />
+      <created>1718192530897</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718192530897</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +184,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="exercice 5 dog list" />
-    <option name="LAST_COMMIT_MESSAGE" value="exercice 5 dog list" />
+    <MESSAGE value="feat: create dog" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create dog" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

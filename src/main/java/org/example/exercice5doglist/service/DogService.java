@@ -6,6 +6,10 @@ import java.util.List;
 
 public class DogService extends BaseService {
 
+    public DogService() {
+        super();
+    }
+
     public boolean create(Dog dog) {
         session = sessionFactory.openSession();
         session.beginTransaction();
