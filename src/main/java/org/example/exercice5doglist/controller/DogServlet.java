@@ -46,7 +46,19 @@ public class DogServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String name = req.getParameter("name");
+        String breed = req.getParameter("breed");
+        LocalDate dateOfBirth = LocalDate.parse(req.getParameter("dateOfBirth"));
 
+        Dog dog = new Dog(name, breed, dateOfBirth);
+
+        dogService.create(dog);
+
+        dogList = dogService.findAll();
+
+        req.setAttribute("dogList", dogList);
+
+        req.getRequestDispatcher("/WEB-INF/list-dog.jsp").forward(req, resp);
     }
 
 
